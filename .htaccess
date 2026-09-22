@@ -17,6 +17,16 @@
 # a visitor sees is the URL the SEO markup claims. Without it every product
 # link is a 404.
 
+# Each product slug also names a real directory (products/<slug>/) that holds
+# the Next.js prefetch payloads. Left to itself, Apache 301-redirects the clean
+# /products/<slug> URL to the directory form /products/<slug>/ to serve that
+# folder — which is exactly the trailing slash the no-slash canonical must not
+# have. Turning DirectorySlash off stops that automatic redirect so the rules
+# below decide the URL instead.
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
@@ -44,15 +54,20 @@
   RewriteRule ^products/three-in-one-masala/?$ /products/chicken-65-masala [L,R=301]
 
   # Strip a trailing slash, so /products/gobi-manchurian-masala/ and
-  # /products/gobi-manchurian-masala are not two URLs for one page.
+  # /products/gobi-manchurian-masala are not two URLs for one page. A product
+  # slug also names a prefetch directory, so a bare !-d guard would skip
+  # exactly those pages and leave their slash in place; strip it whenever a
+  # matching .html exists, and otherwise only for non-directories.
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f [OR]
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.+)/$ /$1 [L,R=301]
 
   # The actual mapping: if the request has no extension and a matching .html
-  # exists, serve it. Real files and directories are left alone, so assets,
-  # /_next/* and sitemap.xml are untouched.
+  # exists, serve it. The .html check is what scopes this — real assets,
+  # /_next/* and sitemap.xml have no matching .html and are left alone — so the
+  # directory guard is dropped, letting a product page win over its same-named
+  # prefetch directory instead of being shadowed by it.
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.*)$ /$1.html [L]
 </IfModule>
