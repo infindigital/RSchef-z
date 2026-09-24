@@ -86,7 +86,7 @@ export default {
     }},
 
     { h3: "Step 1: Prepare the Cauliflower" },
-    { p: "Cut the cauliflower into even, bite-sized florets so they cook at the same rate. Bring a pot of water to the boil, add a little salt, drop the florets in for <strong>2–3 minutes</strong>, then drain well and pat completely dry. This quick parboil does two jobs: it cleans the florets and it just-softens the centre so the inside is tender by the time the outside is golden. Dry them thoroughly, wet florets make the batter slide off and cause the oil to spit." },
+    { p: "Cut the cauliflower into even, bite-sized florets so they cook at the same rate. Bring a pot of water to the boil, add a little salt, drop the florets in for <strong>2 to 3 minutes</strong>, then drain well and pat completely dry. This quick parboil does two jobs: it cleans the florets and it just-softens the centre so the inside is tender by the time the outside is golden. Dry them thoroughly, wet florets make the batter slide off and cause the oil to spit." },
 
     { h3: "Step 2: Prepare the Masala Coating" },
     { p: "In a bowl, whisk together the flour, cornflour, RS Chef'z Gobi Manchurian Masala and salt. Add water a little at a time until you have a <strong>thick, smooth batter</strong> that coats the back of a spoon, think pouring cream, not milk. Too thin and it won't cling; too thick and it turns doughy. The cornflour is what gives you that light, glassy crunch, so don't skip it." },
@@ -95,7 +95,7 @@ export default {
     { p: "Drop the dried florets into the batter and turn them gently until every piece is evenly covered. Lift each floret out and let the excess drip back into the bowl, you want a thin, even shell, not a heavy clump. Coat in small batches just before frying so the batter stays crisp rather than soaking in." },
 
     { h3: "Step 4: Fry Until Crispy" },
-    { p: "Heat oil to about <strong>180°C</strong> (medium-high). Test it with a drop of batter, it should sizzle and rise steadily, not sink or burn. Fry the florets in small batches so the temperature doesn't crash, turning them until deep golden and crisp, about 3–4 minutes. Lift onto a wire rack or paper towel. For extra crunch, let them rest a minute and fry a second time for 30–40 seconds just before saucing." },
+    { p: "Heat oil to about <strong>180°C</strong> (medium-high). Test it with a drop of batter, it should sizzle and rise steadily, not sink or burn. Fry the florets in small batches so the temperature doesn't crash, turning them until deep golden and crisp, about 3 to 4 minutes. Lift onto a wire rack or paper towel. For extra crunch, let them rest a minute and fry a second time for 30 to 40 seconds just before saucing." },
     { tip: {
       title: "The crowding mistake",
       body: "Adding too many florets at once drops the oil temperature, and cool oil means greasy, soft Gobi. Fry in batches, give each piece room, and let the oil recover between rounds.",
@@ -114,8 +114,8 @@ export default {
       prepMin: 20,
       cookMin: 20,
       totalMin: 40,
-      servings: "3–4 servings",
-      yield: "3–4 servings",
+      servings: "3 to 4 servings",
+      yield: "3 to 4 servings",
       ingredients: [
         "1 medium cauliflower (about 500 g), cut into florets",
         "6 tbsp all-purpose flour (maida)",
@@ -131,7 +131,7 @@ export default {
         "1 tsp cornflour in 3 tbsp water (slurry)",
       ],
       instructions: [
-        "Parboil the florets in salted water for 2–3 minutes, drain and pat completely dry.",
+        "Parboil the florets in salted water for 2 to 3 minutes, drain and pat completely dry.",
         "Whisk flour, cornflour, 1.5 tbsp masala and salt with water into a thick, smooth batter.",
         "Coat the dried florets evenly, letting excess batter drip off.",
         "Fry in small batches at 180°C until deep golden and crisp; drain on a rack.",

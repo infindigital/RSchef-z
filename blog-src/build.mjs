@@ -302,17 +302,6 @@ function exploreProducts() {
 <div class="products">${cards}</div>
 </div></section>`;
 }
-function brandCTA() {
-  return `<section class="block"><div class="wrap"><div class="brand-cta" data-reveal">
-<p class="eyebrow" style="color:var(--color-turmeric)">RS Chef'z</p>
-<h2>Bring more flavour to your kitchen</h2>
-<p>Restaurant-style dishes made simple, with masala blends ground fresh in Mangaluru, and no artificial colours, preservatives or flavours.</p>
-<div class="blog-404 btns" style="min-height:auto;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-<a class="btn btn--solid" href="${SITE.amazon}" target="_blank" rel="noopener noreferrer">Shop on Amazon</a>
-<a class="btn btn--ghost" href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-</div>
-</div></div></section>`;
-}
 
 /* ----------------------------------------------------- index page */
 function indexPage(published) {
@@ -376,7 +365,6 @@ ${catTag(featured.category)}
 ${latest}
 
 ${exploreProducts()}
-${brandCTA()}
 </main>` + footer();
 }
 
