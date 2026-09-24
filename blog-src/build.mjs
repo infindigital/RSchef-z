@@ -77,6 +77,7 @@ ${modified || published ? `<meta property="article:modified_time" content="${iso
 ${preloadImage ? `<link rel="preload" as="image" href="${preloadImage.src}"${preloadImage.srcset ? ` imagesrcset="${preloadImage.srcset}" imagesizes="${preloadImage.sizes || "100vw"}"` : ""} fetchpriority="high">` : ""}
 <link rel="stylesheet" href="/blog/fonts.css">
 <link rel="stylesheet" href="/blog/blog.css">
+<link rel="stylesheet" href="/blog/site-chrome.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${SITE.gaId}');</script>
 ${ld}
@@ -85,51 +86,50 @@ ${ld}
 }
 
 /* ------------------------------------------------------ header/footer */
-function navLinks(currentKey, cls) {
-  return NAV.map((n) => {
-    const cur = (n.key === "blog" && currentKey === "blog");
-    return `<a class="${cls}"${cur ? ' aria-current="page"' : ""} href="${n.href}">${esc(n.label)}</a>`;
-  }).join("");
+// The site navigation, reproduced exactly (same Navigation-module classes and
+// markup as every other page) so the blog header is identical. It is rendered
+// static: the pill always carries the .scrolled glass style for legibility, and
+// the mobile overlay is toggled by blog.js instead of React/framer-motion.
+const NB = "Navigation-module__yDraKW__";
+function isActive(n, currentKey) {
+  return n.key === "blog" ? currentKey === "blog" : false;
 }
 function header(currentKey) {
+  const barLinks = NAV.map((n) => {
+    const active = isActive(n, currentKey);
+    return `<li><a class="${NB}link${active ? ` ${NB}linkActive` : ""}"${active ? ' aria-current="page"' : ""} href="${n.href}">${esc(n.label)}</a></li>`;
+  }).join("");
+  const overlayLinks = NAV.map((n) => {
+    const active = isActive(n, currentKey);
+    return `<li><a class="${NB}overlayLink"${active ? ' aria-current="page"' : ""} href="${n.href}" data-menu-close>${esc(n.label)}</a></li>`;
+  }).join("");
   return `<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="wrap">
-<a class="brand" href="/" aria-label="RS Chef'z, home"><img src="${SITE.logo}" alt="RS Chef'z" width="89" height="38"></a>
-<nav class="nav-primary" aria-label="Primary">${navLinks(currentKey, "nav-link")}</nav>
-<a class="nav-cta" href="${SITE.amazon}" target="_blank" rel="noopener noreferrer">Buy Now</a>
-<button class="nav-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">${I.menu}</button>
-</div></header>
-<div class="nav-scrim" data-menu-close></div>
-<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
-<div class="mobile-menu__head"><span class="brand"><img src="${SITE.logo}" alt="RS Chef'z" width="89" height="38"></span><button class="mobile-menu__close" data-menu-close aria-label="Close menu">${I.close}</button></div>
-${navLinks(currentKey, "")}
-<a class="nav-cta" href="${SITE.amazon}" target="_blank" rel="noopener noreferrer">Buy Now</a>
-</nav>`;
+<header class="${NB}header">
+<nav aria-label="Main" class="${NB}bar ${NB}scrolled">
+<a class="${NB}brand" aria-label="RS Chef'z, home" href="/"><img alt="RS Chef'z" width="1000" height="426" decoding="async" class="${NB}brandLogo" src="${SITE.logo}"></a>
+<ul class="${NB}links">${barLinks}</ul>
+<a class="${NB}buyNow" href="${SITE.amazon}" target="_blank" rel="noopener noreferrer">Buy Now</a>
+<button type="button" class="${NB}menuButton" data-menu-toggle aria-expanded="false" aria-controls="kj-overlay" aria-label="Open menu"><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+</nav>
+</header>
+<div class="${NB}overlay" id="kj-overlay" aria-hidden="true" data-menu-overlay>
+<ul class="${NB}overlayLinks">${overlayLinks}<li><a class="${NB}overlayBuy" href="${SITE.amazon}" target="_blank" rel="noopener noreferrer" data-menu-close>Buy Now</a></li></ul>
+</div>`;
+}
+// The site footer, reproduced exactly (same Footer/BuyButtons module classes and
+// markup as every other page) so the blog footer is identical.
+const FB = "Footer-module__3hUVsW__", BB = "BuyButtons-module__LvFKWW__";
+const FICON = {
+  wa: '<svg class="' + BB + 'icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.87 9.87 0 0 0 4.74 1.21c5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2Zm0 18.03a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.07.8.82-3-.2-.31a8.08 8.08 0 0 1-1.24-4.31c0-4.48 3.64-8.12 8.12-8.12s8.12 3.64 8.12 8.12-3.64 8.13-8.12 8.13Zm4.45-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21a7.34 7.34 0 0 1-1.35-1.68c-.14-.24-.02-.38.1-.5.11-.11.25-.28.37-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.42.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.35 1 2.51c.12.16 1.72 2.62 4.16 3.68.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.05.14-1.16-.06-.1-.22-.16-.46-.28Z"></path></svg>',
+  ext: '<svg class="' + BB + 'icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>',
+  packArrow: '<svg class="' + FB + 'packArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg>',
+  creditArrow: '<svg class="' + FB + 'creditArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>',
+};
+function packCard(url, shot, name, dishes) {
+  return `<li><a class="${FB}packCard" href="${url}"><span class="${FB}packShot"><img alt="" loading="lazy" width="1094" height="1403" decoding="async" src="${shot}"/></span><span class="${FB}packText"><span class="${FB}packName">${esc(name)}</span><span class="${FB}packDishes">${esc(dishes)}</span></span>${FICON.packArrow}</a></li>`;
 }
 function footer() {
-  const cats = Object.entries(CATEGORIES).map(([slug, c]) => `<li><a href="${SITE.blogBase}/category/${slug}">${esc(c.name)}</a></li>`).join("");
-  return `<footer class="site-footer"><div class="wrap">
-<div class="footer-grid">
-<div>
-<p class="eyebrow" style="color:var(--color-turmeric)">RS Chef'z</p>
-<p class="promise">Authentic Flavour.<br>Crafted to Perfection.</p>
-<div class="marks">${BRAND_MARKS.map((m) => `<span>${esc(m)}</span>`).join("")}</div>
-</div>
-<div class="footer-col"><h4>Products</h4><ul>
-<li><a href="${PRODUCTS["gobi-manchurian-masala"].url}">Gobi Manchurian Masala</a></li>
-<li><a href="${PRODUCTS["three-in-one-masala"].url}">3 in 1 Masala</a></li>
-<li><a href="${SITE.amazon}" target="_blank" rel="noopener noreferrer">Shop on Amazon</a></li>
-</ul></div>
-<div class="footer-col"><h4>The Kitchen Journal</h4><ul>
-<li><a href="${SITE.blogBase}/">All Articles</a></li>
-${cats}
-</ul></div>
-</div>
-<div class="footer-bottom">
-<span>© 2026 RS Chef'z. All rights reserved. FSSAI licensed. Product of India.</span>
-<span>Developed by <a href="${SITE.credit}" target="_blank" rel="noopener">In/Fin</a></span>
-</div>
-</div></footer>
+  return `<footer class="${FB}footer"><div class="${FB}cta"><h2 class="${FB}ctaTitle">Bring the restaurant home.</h2><p class="${FB}ctaSub">Two packs, every favourite. Delivered across India.</p><div class="${BB}row ${FB}ctaButtons"><a class="${BB}button ${BB}whatsapp" href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer">${FICON.wa}Buy on WhatsApp</a><a class="${BB}button ${BB}amazon" href="${SITE.amazon}" target="_blank" rel="noopener noreferrer">Shop on Amazon${FICON.ext}</a></div></div><div class="${FB}main"><div class="${FB}brandCol"><img alt="RS Chef'z" loading="lazy" width="1000" height="426" decoding="async" class="${FB}logo" src="${SITE.logo}"/><p class="${FB}tagline">Authentic Flavour. Crafted to Perfection.</p><ul class="${FB}promise"><li>No artificial colors</li><li>No preservatives</li><li>No artificial flavors</li></ul></div><nav aria-label="Products"><p class="${FB}colTitle">Products</p><ul class="${FB}packList">${packCard("/products/gobi-manchurian-masala", "/assets/products/gobi-manchurian/front.webp", "Gobi Manchurian Masala", "Gobi Manchurian · Mushroom Fry · Paneer Tikka")}${packCard("/products/chicken-65-masala", "/assets/products/three-in-one/front.webp", "3 in 1 Masala", "Chicken 65 · Fish Fry · Gobi Manchurian")}</ul></nav></div><div class="${FB}bottom"><p class="${FB}legal"><span>© 2026 RS Chef'z. All rights reserved.</span><span class="${FB}sep" aria-hidden="true"></span><span>FSSAI licensed. Product of India.</span></p><a class="${FB}credit" href="${SITE.credit}" target="_blank" rel="noopener"><span class="${FB}creditLabel">Developed by</span><span class="${FB}creditMark">In<span class="${FB}creditSlash">/</span>Fin</span>${FICON.creditArrow}</a></div></footer>
 <script src="/blog/blog.js" defer></script>
 </body></html>`;
 }
@@ -325,10 +325,24 @@ function indexPage(published) {
     publisher: { "@type": "Organization", name: "RS Chef'z", logo: { "@type": "ImageObject", url: abs(SITE.logo) } },
     blogPost: published.map((a) => ({ "@type": "BlogPosting", headline: a.title, url: abs(a.url), datePublished: isoDT(a.publishedAt), image: abs(a.ogImage) })),
   };
-  const filters = `<div class="filter" role="group" aria-label="Filter articles by category">
+  // The grid holds everything except the featured article. Search + category
+  // filters only appear when there is more than one article / category to sift.
+  const rest = published.filter((a) => a !== featured);
+  const presentCats = Object.keys(CATEGORIES).filter((s) => published.some((a) => a.category === s));
+  const showGrid = rest.length > 0;
+  const showFilter = presentCats.length > 1;
+  const filters = showFilter ? `<div class="filter" role="group" aria-label="Filter articles by category">
 <button data-filter="all" aria-pressed="true">All</button>
-${Object.entries(CATEGORIES).map(([s, c]) => `<button data-filter="${s}" aria-pressed="false">${esc(c.name)}</button>`).join("")}
-</div>`;
+${presentCats.map((s) => `<button data-filter="${s}" aria-pressed="false">${esc(CATEGORIES[s].name)}</button>`).join("")}
+</div>` : "";
+  const heroSearch = showGrid ? `<div class="blog-hero__search"><div class="search">${I.search}<label class="sr-only" for="blog-search">Search articles</label><input id="blog-search" type="search" placeholder="Search recipes, masalas &amp; cooking ideas..." autocomplete="off"></div></div>` : "";
+  const latest = showGrid ? `
+<section class="block block--tint" id="latest"><div class="wrap">
+<div class="section-head"><div><p class="eyebrow">The Journal</p><h2>Latest from the Kitchen</h2></div></div>
+${filters}
+<div class="grid" id="article-grid">${rest.map((a, i) => articleCard(a, (i % 3) + 1)).join("")}</div>
+<p class="empty" id="grid-empty" hidden>No articles match your search yet. Try another word, or <a href="${SITE.blogBase}/">browse all articles</a>.</p>
+</div></section>` : "";
   const heroSrcset = "/assets/blog/gobi-manchurian-recipe-rs-chefz-1200.webp 1200w, /assets/blog/gobi-manchurian-recipe-rs-chefz.webp 1600w";
   return head({
     title: "The Kitchen Journal | Recipes, Cooking Tips & Masala Ideas | RS Chef'z",
@@ -342,7 +356,7 @@ ${Object.entries(CATEGORIES).map(([s, c]) => `<button data-filter="${s}" aria-pr
 <p class="eyebrow">RS Chef'z</p>
 <h1>The Kitchen Journal</h1>
 <p>${esc(SITE.subtitle)}</p>
-<div class="blog-hero__search"><div class="search">${I.search}<label class="sr-only" for="blog-search">Search articles</label><input id="blog-search" type="search" placeholder="Search recipes, masalas &amp; cooking ideas..." autocomplete="off"></div></div>
+${heroSearch}
 </div>
 </section>
 
@@ -359,13 +373,7 @@ ${catTag(featured.category)}
 </div>
 </article>
 </div></section>
-
-<section class="block block--tint" id="latest"><div class="wrap">
-<div class="section-head"><div><p class="eyebrow">The Journal</p><h2>Latest from the Kitchen</h2></div></div>
-${filters}
-<div class="grid" id="article-grid">${published.map((a, i) => articleCard(a, (i % 3) + 1)).join("")}</div>
-<p class="empty" id="grid-empty" hidden>No articles match your search yet. Try another word, or <a href="${SITE.blogBase}/">browse all articles</a>.</p>
-</div></section>
+${latest}
 
 ${exploreProducts()}
 ${brandCTA()}
@@ -402,7 +410,10 @@ ${exploreProducts()}
 </main>` + footer();
 }
 function filtersFor(active) {
-  return `<div class="filter" aria-label="Browse categories"><a href="${SITE.blogBase}/"${active === "all" ? ' aria-current="page"' : ""}>All</a>${Object.entries(CATEGORIES).map(([s, c]) => `<a href="${SITE.blogBase}/category/${s}"${s === active ? ' aria-current="page"' : ""}>${esc(c.name)}</a>`).join("")}</div>`;
+  // Only link categories that actually have a generated page; hide the bar
+  // entirely when there is nothing to switch between.
+  if (PRESENT_CATS.length < 2) return "";
+  return `<div class="filter" aria-label="Browse categories"><a href="${SITE.blogBase}/"${active === "all" ? ' aria-current="page"' : ""}>All</a>${PRESENT_CATS.map((s) => `<a href="${SITE.blogBase}/category/${s}"${s === active ? ' aria-current="page"' : ""}>${esc(CATEGORIES[s].name)}</a>`).join("")}</div>`;
 }
 
 /* --------------------------------------------------------- 404 */
@@ -421,6 +432,7 @@ function notFoundPage() {
 
 /* ============================================================ build */
 let BY_SLUG = {};
+let PRESENT_CATS = [];
 async function main() {
   // load articles
   const files = (await readdir(join(__dir, "articles"))).filter((f) => f.endsWith(".mjs"));
@@ -438,13 +450,14 @@ async function main() {
   }
   articles.sort((x, y) => (x.publishedAt < y.publishedAt ? 1 : -1));
   BY_SLUG = Object.fromEntries(articles.map((a) => [a.slug, a]));
+  PRESENT_CATS = Object.keys(CATEGORIES).filter((s) => articles.some((a) => a.category === s));
 
   // clean & recreate output (preserve nothing stale, but keep dir)
   if (existsSync(OUT)) await rm(OUT, { recursive: true, force: true });
   await mkdir(join(OUT, "category"), { recursive: true });
 
   // static assets
-  for (const s of ["blog.css", "blog.js", "fonts.css", "nav-inject.js"]) {
+  for (const s of ["blog.css", "site-chrome.css", "blog.js", "fonts.css", "nav-inject.js"]) {
     await copyFile(join(__dir, "static", s), join(OUT, s));
   }
   // scoped 404 for the blog subtree
@@ -454,9 +467,12 @@ async function main() {
   await writeFile(join(OUT, "index.html"), indexPage(articles));
   await writeFile(join(OUT, "404.html"), notFoundPage());
   for (const a of articles) await writeFile(join(OUT, a.slug + ".html"), articlePage(a));
+  // Only emit category pages that actually have at least one article, so the
+  // blog never links to thin or empty pages.
   const catUrls = [];
   for (const slug of Object.keys(CATEGORIES)) {
     const list = articles.filter((a) => a.category === slug);
+    if (!list.length) continue;
     await writeFile(join(OUT, "category", slug + ".html"), categoryPage(slug, list));
     catUrls.push({ loc: `${SITE.origin}${SITE.blogBase}/category/${slug}`, pr: "0.5" });
   }
@@ -483,7 +499,7 @@ ${urls.map((u) => `<url>
 `;
   await writeFile(join(ROOT, "sitemap.xml"), sitemap);
 
-  console.log(`Built ${articles.length} articles, ${Object.keys(CATEGORIES).length} categories, index + 404.`);
+  console.log(`Built ${articles.length} articles, ${catUrls.length} categories, index + 404.`);
   console.log("Articles:", articles.map((a) => `${a.slug} (${a.readingLabel})`).join("\n          "));
 }
 main().catch((e) => { console.error(e); process.exit(1); });

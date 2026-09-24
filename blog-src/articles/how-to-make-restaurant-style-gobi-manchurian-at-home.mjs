@@ -35,11 +35,7 @@ export default {
   },
   ogImage: "/assets/blog/og-gobi-manchurian-recipe.webp",
   relatedProduct: "gobi-manchurian-masala",
-  relatedArticles: [
-    "how-to-get-restaurant-style-crispiness-at-home",
-    "5-easy-dishes-you-can-make-with-gobi-manchurian-masala",
-    "gobi-manchurian-vs-chicken-65-two-indian-starters-to-try",
-  ],
+  relatedArticles: [],
   content: [
     { p: "Gobi Manchurian is the dish everyone reaches for first at an Indo-Chinese restaurant, golden, crackly cauliflower tossed in a glossy, spicy-sweet sauce that hits sour, savoury and hot notes all at once. It looks simple, and yet the version most people make at home turns out soft, oily or bland by the time it reaches the table." },
     { p: "The good news: restaurant-style Gobi Manchurian is far more about <strong>technique and timing</strong> than about any secret ingredient. Get the batter, the frying temperature and the final toss right, and you can put out a plate every bit as crisp as your favourite spot. This guide walks through the whole process, with the specific steps that keep the cauliflower crunchy once the sauce goes on." },
@@ -154,7 +150,7 @@ export default {
       "<strong>Double-fry</strong> for a quick second dip just before saucing to drive off any residual moisture.",
       "<strong>Sauce at the very end</strong>, over high heat, for under a minute, long simmering is what turns crisp Gobi soggy.",
     ]},
-    { p: "For a deeper look at the frying science that applies to every crispy starter, read <a href=\"/blog/how-to-get-restaurant-style-crispiness-at-home\">how to get restaurant-style crispiness at home</a>." },
+    { p: "The same frying science applies to every crispy starter: dry ingredients, a thick cornflour batter, oil held at 180&deg;C, and small batches so the temperature never crashes." },
 
     { h2: "A Simpler Way to Add Flavour" },
     { p: "The part that trips most home cooks isn't the frying. It's the seasoning. Getting the ginger, garlic, chilli and spice balance right across both the coating and the sauce usually means juggling several jars and still second-guessing the ratios." },
@@ -163,7 +159,7 @@ export default {
 
     { h2: "More Than Just Gobi" },
     { p: "One of the quiet advantages of a good Manchurian blend is how far it travels. The same masala that crisps up cauliflower works beautifully on mushrooms for a quick <strong>Mushroom Fry</strong>, and it makes an easy marinade for <strong>Paneer Tikka</strong> when you want something off the tawa or grill." },
-    { p: "If you like getting more out of a single pack, see <a href=\"/blog/5-easy-dishes-you-can-make-with-gobi-manchurian-masala\">5 easy dishes you can make with Gobi Manchurian Masala</a>, the same crunch and flavour, three different ways." },
+    { p: "That is the quiet value of a single, well-made blend: one pack, the same crunch and flavour, several different dishes from your kitchen." },
 
     { h2: "Final Thoughts" },
     { p: "Restaurant-style Gobi Manchurian at home comes down to a handful of habits: dry florets, a thick cornflour batter, hot oil fried in batches, and a fast final toss. Get those right and the rest is easy, and with the seasoning handled by a single blend, it's a weeknight dish, not a weekend project." },

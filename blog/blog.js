@@ -8,21 +8,23 @@
     try { if (typeof window.gtag === "function") window.gtag("event", name, params || {}); } catch (e) {}
   }
 
-  /* -------- Mobile menu (blog pages own their header) ---------------- */
+  /* -------- Mobile menu: toggles the same overlay the site uses -------- */
   var body = doc.body;
   var toggle = doc.querySelector("[data-menu-toggle]");
-  var menu = doc.getElementById("mobile-menu");
+  var overlay = doc.getElementById("kj-overlay");
+  var OPEN_BTN = "Navigation-module__yDraKW__menuButtonOpen";
   function setMenu(open) {
-    body.classList.toggle("menu-open", open);
-    if (toggle) toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    if (menu) menu.setAttribute("aria-hidden", open ? "false" : "true");
-    if (open && menu) { var f = menu.querySelector("a,button"); if (f) f.focus(); }
+    if (overlay) overlay.classList.toggle("is-open", open);
+    if (overlay) overlay.setAttribute("aria-hidden", open ? "false" : "true");
+    if (toggle) { toggle.classList.toggle(OPEN_BTN, open); toggle.setAttribute("aria-expanded", open ? "true" : "false"); toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu"); }
+    body.classList.toggle("kj-noscroll", open);
+    if (open && overlay) { var f = overlay.querySelector("a,button"); if (f) f.focus(); }
     else if (toggle) toggle.focus();
   }
-  on(toggle, "click", function () { setMenu(!body.classList.contains("menu-open")); });
+  on(toggle, "click", function () { setMenu(!(overlay && overlay.classList.contains("is-open"))); });
   doc.querySelectorAll("[data-menu-close]").forEach(function (b) { on(b, "click", function () { setMenu(false); }); });
-  if (menu) menu.querySelectorAll("a").forEach(function (a) { on(a, "click", function () { setMenu(false); }); });
-  on(doc, "keydown", function (e) { if (e.key === "Escape" && body.classList.contains("menu-open")) setMenu(false); });
+  if (overlay) on(overlay, "click", function (e) { if (e.target === overlay) setMenu(false); });
+  on(doc, "keydown", function (e) { if (e.key === "Escape" && overlay && overlay.classList.contains("is-open")) setMenu(false); });
 
   /* -------- Scroll reveal ------------------------------------------- */
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;

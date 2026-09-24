@@ -29,6 +29,16 @@
     a.removeAttribute("aria-current");
     a.setAttribute("data-kj", "");
     a.className = (a.className || "").split(/\s+/).filter(function (c) { return c && !/Active/i.test(c); }).join(" ");
+    // The mobile overlay items are animated by the site's JS, which leaves
+    // per-item inline opacity/transform on the original. Clear those on the
+    // clone (and its anchor) so the injected link is always fully visible.
+    [clone, a].forEach(function (el) {
+      if (!el || !el.style) return;
+      el.style.removeProperty("opacity");
+      el.style.removeProperty("transform");
+      el.style.opacity = "1";
+      el.style.transform = "none";
+    });
     unit.after(clone);
   }
   function scan() {

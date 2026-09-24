@@ -1,0 +1,126 @@
+/* RS Chef'z - The Kitchen Journal: site header + footer chrome.
+   These are the exact Navigation and Footer styles from the main site
+   (extracted from the compiled stylesheet), so the blog's header and
+   footer are identical to every other page. A few overrides at the end
+   let the same markup run statically here, without React/framer-motion. */
+
+/* Tokens the extracted rules reference that blog.css doesn't already define. */
+:root{
+  --color-logo-green:#009b4c;
+  --surface-glass-border:#fffc;
+  --text-on-accent:#fff;
+  --text-primary:#2b1d16;
+  --text-secondary:#000;
+  --page-max-width:1280px;
+}
+
+/* =============================================== site navigation (header) */
+.Navigation-module__yDraKW__header{z-index:60;pointer-events:none;justify-content:center;display:flex;position:fixed;top:14px;left:0;right:0}
+.Navigation-module__yDraKW__bar{pointer-events:auto;width:min(1040px,100% - 28px);transition:box-shadow .5s var(--ease-soft), border-color .5s var(--ease-soft), backdrop-filter .5s var(--ease-soft), background .5s var(--ease-soft);background:0 0;border:1px solid #0000;border-radius:999px;align-items:center;gap:26px;padding:10px 12px 10px 18px;display:flex}
+.Navigation-module__yDraKW__scrolled{border-color:var(--surface-glass-border);box-shadow:var(--shadow-soft);-webkit-backdrop-filter:blur(18px)saturate(1.5);background:#ffffffd1}
+.Navigation-module__yDraKW__onDark{background:#1a0f0970;border-color:#ffe2be2e;box-shadow:0 12px 38px #0006}
+.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__link{color:#ffecd2bd}
+.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__link:hover,.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__linkActive{color:#fff6ea}
+.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__link:hover{background:#ffd5a029}
+.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__linkActive:after{background:var(--color-turmeric)}
+.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__brandName{color:#ff6f62}
+.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__brandLogo{filter:drop-shadow(0 0 14px #ffd29673)}
+.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__menuButton{background:#1a0f0999;border-color:#ffe2be38}
+.Navigation-module__yDraKW__onDark .Navigation-module__yDraKW__menuButton span{background:#fff6ea}
+.Navigation-module__yDraKW__brand{transition:opacity .34s var(--ease-soft);align-items:center;gap:10px;margin-right:auto;display:inline-flex}
+.Navigation-module__yDraKW__brandHeld{opacity:0;animation:Navigation-module__yDraKW__brandArrives .35s var(--ease-soft) 12s forwards}
+@keyframes Navigation-module__yDraKW__brandArrives{0%{opacity:0}to{opacity:1}}
+.Navigation-module__yDraKW__brandMark{align-items:center;gap:8px;display:inline-flex}
+.Navigation-module__yDraKW__brandPents{gap:3px;display:inline-flex}
+.Navigation-module__yDraKW__brandPent{background:var(--color-logo-green);width:22px;height:21px;color:var(--text-on-accent);clip-path:polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);font-family:var(--font-heading);place-items:center;padding-top:3px;font-size:.6rem;font-weight:700;line-height:1;display:grid}
+.Navigation-module__yDraKW__brandName{font-family:var(--font-heading);letter-spacing:-.01em;color:var(--color-logo-red);font-size:1.2rem;font-weight:700}
+.Navigation-module__yDraKW__brandLogo{width:auto;height:40px}
+.Navigation-module__yDraKW__links{align-items:center;gap:6px;list-style:none;display:flex}
+.Navigation-module__yDraKW__link{font-family:var(--font-display), var(--font-heading);letter-spacing:.09em;text-transform:uppercase;color:var(--text-primary);transition:color .35s var(--ease-soft), background .35s var(--ease-soft);border-radius:999px;padding:8px 14px;font-size:.88rem;font-weight:400;display:inline-block;position:relative}
+.Navigation-module__yDraKW__link:hover{color:var(--color-chilli);background:#f5b30124}
+.Navigation-module__yDraKW__linkActive{color:var(--color-chilli)}
+.Navigation-module__yDraKW__linkActive:after{content:"";background:var(--color-chilli);border-radius:50%;width:5px;height:5px;position:absolute;bottom:2px;left:50%;transform:translate(-50%)}
+.Navigation-module__yDraKW__buyNow{background:linear-gradient(135deg, var(--color-chilli) 0%, var(--color-orange) 100%);color:var(--text-on-accent);font-family:var(--font-display), var(--font-heading);letter-spacing:.1em;text-transform:uppercase;transition:transform .4s var(--ease-cinematic), box-shadow .4s var(--ease-cinematic);border-radius:999px;padding:11px 24px;font-size:.86rem;font-weight:400;box-shadow:0 10px 26px #e633244d}
+.Navigation-module__yDraKW__buyNow:hover{transform:translateY(-2px);box-shadow:0 16px 34px #e6332466}
+.Navigation-module__yDraKW__buyNow:focus-visible,.Navigation-module__yDraKW__link:focus-visible,.Navigation-module__yDraKW__brand:focus-visible{outline:3px solid var(--color-turmeric);outline-offset:3px}
+.Navigation-module__yDraKW__menuButton{border:1px solid var(--surface-glass-border);background:#ffffffd9;border-radius:50%;width:42px;height:42px;display:none;position:relative}
+.Navigation-module__yDraKW__menuButton span{background:var(--text-primary);height:2px;transition:transform .4s var(--ease-cinematic);border-radius:2px;position:absolute;left:12px;right:12px}
+.Navigation-module__yDraKW__menuButton span:first-child{top:17px}
+.Navigation-module__yDraKW__menuButton span:nth-child(2){bottom:17px}
+.Navigation-module__yDraKW__menuButtonOpen span:first-child{transform:translateY(3px)rotate(45deg)}
+.Navigation-module__yDraKW__menuButtonOpen span:nth-child(2){transform:translateY(-3px)rotate(-45deg)}
+.Navigation-module__yDraKW__overlay{pointer-events:auto;z-index:-1;-webkit-backdrop-filter:blur(24px);background:linear-gradient(#fffffff5 0%,#fff3d0f7 100%);justify-content:center;align-items:center;display:flex;position:fixed;inset:0}
+.Navigation-module__yDraKW__overlayLinks{text-align:center;flex-direction:column;align-items:center;gap:22px;list-style:none;display:flex}
+.Navigation-module__yDraKW__overlayLink{font-family:var(--font-display), var(--font-heading);letter-spacing:.04em;text-transform:uppercase;color:var(--text-primary);font-size:clamp(1.9rem,8vw,3rem);font-weight:400}
+.Navigation-module__yDraKW__overlayBuy{background:linear-gradient(135deg, var(--color-chilli) 0%, var(--color-orange) 100%);color:var(--text-on-accent);font-family:var(--font-display), var(--font-heading);letter-spacing:.08em;text-transform:uppercase;border-radius:999px;margin-top:10px;padding:15px 38px;font-size:1.05rem;font-weight:400;display:inline-block;box-shadow:0 16px 40px #e6332452}
+@media (max-width:860px){.Navigation-module__yDraKW__links,.Navigation-module__yDraKW__buyNow{display:none}.Navigation-module__yDraKW__menuButton{display:block}}
+/* =================================================== site footer */
+.BuyButtons-module__LvFKWW__row{flex-wrap:wrap;align-items:center;gap:14px;display:flex}
+.BuyButtons-module__LvFKWW__button{font-family:var(--font-heading);letter-spacing:.01em;color:var(--text-on-accent);transition:transform .45s var(--ease-cinematic), box-shadow .45s var(--ease-cinematic);will-change:transform;border-radius:999px;align-items:center;gap:10px;padding:15px 28px;font-size:.98rem;font-weight:600;display:inline-flex}
+.BuyButtons-module__LvFKWW__button:hover{transform:translateY(-3px)}
+.BuyButtons-module__LvFKWW__button:focus-visible{outline:3px solid var(--color-turmeric);outline-offset:3px}
+.BuyButtons-module__LvFKWW__icon{flex-shrink:0;width:20px;height:20px}
+.BuyButtons-module__LvFKWW__whatsapp{background:linear-gradient(135deg, #23b04f 0%, var(--color-green) 100%);box-shadow:0 14px 34px #1e9e4652}
+.BuyButtons-module__LvFKWW__whatsapp:hover{box-shadow:0 20px 44px #1e9e466b}
+.BuyButtons-module__LvFKWW__amazon{background:linear-gradient(135deg, var(--color-orange) 0%, var(--color-chilli) 100%);box-shadow:0 14px 34px #e6332447}
+.BuyButtons-module__LvFKWW__amazon:hover{box-shadow:0 20px 44px #e6332466}
+@media (max-width:560px){.BuyButtons-module__LvFKWW__row{width:100%}.BuyButtons-module__LvFKWW__button{flex:auto;justify-content:center;padding:14px 20px;font-size:.92rem}}
+.Footer-module__3hUVsW__footer{background:linear-gradient(180deg, var(--tint-green) 0%, var(--color-cream) 30%, var(--color-cream-deep) 100%);padding:0 24px;position:relative}
+.Footer-module__3hUVsW__cta{max-width:var(--page-max-width);text-align:center;flex-direction:column;align-items:center;gap:16px;margin:0 auto;padding:clamp(80px,12vh,140px) 0 clamp(60px,9vh,100px);display:flex}
+.Footer-module__3hUVsW__ctaTitle{font-size:clamp(2.2rem,5.6vw,4rem);line-height:1.06}
+.Footer-module__3hUVsW__ctaSub{color:var(--text-secondary);font-size:clamp(1rem,2vw,1.15rem)}
+.Footer-module__3hUVsW__ctaButtons{margin-top:14px}
+.Footer-module__3hUVsW__main{max-width:var(--page-max-width);border-top:1px solid #6b5a4e29;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);align-items:start;gap:clamp(30px,5vw,60px);margin:0 auto;padding:clamp(36px,6vh,60px) 0;display:grid}
+.Footer-module__3hUVsW__brandCol{flex-direction:column;gap:14px;display:flex}
+.Footer-module__3hUVsW__logo{width:clamp(120px,14vw,160px);height:auto}
+.Footer-module__3hUVsW__brandName{font-family:var(--font-heading);color:var(--color-logo-red);font-size:1.5rem;font-weight:700}
+.Footer-module__3hUVsW__tagline{color:var(--text-secondary);max-width:30ch;font-size:.98rem}
+.Footer-module__3hUVsW__colTitle{font-family:var(--font-heading);letter-spacing:.22em;text-transform:uppercase;color:var(--text-primary);margin-bottom:16px;font-size:.82rem;font-weight:700}
+.Footer-module__3hUVsW__promise{flex-wrap:wrap;gap:8px;margin:4px 0 0;padding:0;list-style:none;display:flex}
+.Footer-module__3hUVsW__promise li{color:var(--text-secondary);white-space:nowrap;background:#ffffff8c;border:1px solid #6b5a4e1f;border-radius:999px;align-items:center;gap:7px;padding:6px 12px 6px 10px;font-size:.8rem;display:flex}
+.Footer-module__3hUVsW__promise li:before{content:"";background:var(--color-green);border-radius:50%;flex:none;width:7px;height:7px}
+.Footer-module__3hUVsW__packList{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none;display:grid}
+.Footer-module__3hUVsW__packCard{color:var(--text-primary);transition:transform .4s var(--ease-soft), box-shadow .4s var(--ease-soft), border-color .4s var(--ease-soft), background .4s var(--ease-soft);background:#fff9;border:1px solid #6b5a4e1f;border-radius:18px;align-items:center;gap:16px;padding:12px 18px 12px 12px;display:flex}
+.Footer-module__3hUVsW__packCard:hover{background:var(--color-white);box-shadow:var(--shadow-soft);border-color:#e6332447;transform:translateY(-3px)}
+.Footer-module__3hUVsW__packCard:focus-visible{outline:3px solid var(--color-turmeric);outline-offset:3px}
+.Footer-module__3hUVsW__packShot{flex:none;width:62px;display:block}
+.Footer-module__3hUVsW__packShot img{filter:drop-shadow(0 8px 14px #6b5a4e38);width:100%;height:auto;transition:transform .5s var(--ease-soft);display:block}
+.Footer-module__3hUVsW__packCard:hover .Footer-module__3hUVsW__packShot img{transform:translateY(-2px)rotate(-1.5deg)}
+.Footer-module__3hUVsW__packText{flex-direction:column;gap:3px;min-width:0;display:flex}
+.Footer-module__3hUVsW__packName{font-family:var(--font-heading);font-size:1rem;font-weight:700;line-height:1.2}
+.Footer-module__3hUVsW__packDishes{color:var(--text-secondary);opacity:.75;font-size:.8rem}
+.Footer-module__3hUVsW__packArrow{width:20px;height:20px;color:var(--color-chilli);opacity:.5;transition:transform .4s var(--ease-soft), opacity .4s var(--ease-soft);flex:none;margin-left:auto}
+.Footer-module__3hUVsW__packCard:hover .Footer-module__3hUVsW__packArrow{opacity:1;transform:translate(4px)}
+.Footer-module__3hUVsW__bottom{max-width:var(--page-max-width);color:var(--text-secondary);border-top:1px solid #6b5a4e29;flex-wrap:wrap;justify-content:space-between;gap:10px;margin:0 auto;padding:22px 0 30px;font-size:.86rem;display:flex}
+.Footer-module__3hUVsW__legal{flex-wrap:wrap;align-items:center;gap:10px;display:flex}
+.Footer-module__3hUVsW__sep{opacity:.45;background:currentColor;border-radius:50%;width:3px;height:3px}
+.Footer-module__3hUVsW__credit{color:var(--text-secondary);transition:color .35s var(--ease-soft), border-color .35s var(--ease-soft), background .35s var(--ease-soft), transform .35s var(--ease-soft);background:#ffffff73;border:1px solid #6b5a4e29;border-radius:999px;align-items:center;gap:8px;padding:7px 14px;display:inline-flex}
+.Footer-module__3hUVsW__credit:hover{color:var(--color-chilli);background:var(--color-white);border-color:#e633244d;transform:translateY(-2px)}
+.Footer-module__3hUVsW__credit:focus-visible{outline:3px solid var(--color-turmeric);outline-offset:3px}
+.Footer-module__3hUVsW__creditLabel{letter-spacing:.16em;text-transform:uppercase;opacity:.7;font-size:.68rem}
+.Footer-module__3hUVsW__creditMark{font-family:var(--font-heading);letter-spacing:-.01em;color:var(--text-primary);transition:color .35s var(--ease-soft);font-size:.94rem;font-weight:700}
+.Footer-module__3hUVsW__credit:hover .Footer-module__3hUVsW__creditMark{color:var(--color-chilli)}
+.Footer-module__3hUVsW__creditSlash{color:#7d7d7d;margin:0 1px}
+.Footer-module__3hUVsW__credit:hover .Footer-module__3hUVsW__creditSlash{color:#7d7d7d}
+.Footer-module__3hUVsW__creditArrow{opacity:.55;width:12px;height:12px;transition:transform .35s var(--ease-soft), opacity .35s var(--ease-soft)}
+.Footer-module__3hUVsW__credit:hover .Footer-module__3hUVsW__creditArrow{opacity:1;transform:translate(2px,-2px)}
+@media (max-width:980px){.Footer-module__3hUVsW__packList{grid-template-columns:1fr}}
+@media (max-width:760px){.Footer-module__3hUVsW__main{grid-template-columns:1fr;gap:30px}.Footer-module__3hUVsW__bottom{text-align:center;flex-direction:column;align-items:center;gap:16px}.Footer-module__3hUVsW__legal{flex-direction:column;gap:4px}.Footer-module__3hUVsW__sep{display:none}}
+/* ============================ static-context overrides (blog pages only) */
+/* The pill renders with the .scrolled glass style applied in markup, so the
+   fixed nav stays legible over any background without scroll JS. */
+
+/* Mobile overlay is shown by toggling .is-open (no React mount/unmount here).
+   The id selector overrides the module's own z-index:-1 and display. */
+#kj-overlay{display:none;z-index:55}
+#kj-overlay.is-open{display:flex}
+body.kj-noscroll{overflow:hidden}
+
+/* Pages that don't open with a full-bleed hero need top room for the
+   fixed floating nav so it doesn't overlap their first element. */
+body[data-page-type="article"] #main,
+body[data-page-type="blog_category"] #main,
+body[data-page-type="blog_404"] #main{padding-top:clamp(84px,11vw,108px)}
+
+/* The blog home hero sits behind the nav; keep its top content clear of it. */
+body[data-page-type="blog_home"] .blog-hero .wrap{padding-top:clamp(104px,14vw,150px)}
