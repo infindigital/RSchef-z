@@ -1,0 +1,116 @@
+export default {
+  slug: "easy-fish-fry-recipe-with-indian-spices",
+  title: "Easy Fish Fry Recipe with Indian Spices",
+  metaTitle: "Easy Fish Fry Recipe with Indian Spices | RS Chef'z",
+  metaDescription:
+    "A simple, crispy Indian fish fry recipe with a spiced masala coating. Learn how to marinate and pan-fry fish for restaurant-style flavour at home.",
+  excerpt:
+    "A crisp, spiced masala crust and a few minutes in the pan, this easy Indian fish fry is a coastal classic done right.",
+  category: "recipes",
+  tags: ["Fish Fry", "Masala", "Indian Starters", "Easy Recipes"],
+  primaryKeyword: "Fish Fry recipe",
+  secondaryKeywords: [
+    "Indian fish fry recipe",
+    "masala fish fry",
+    "crispy fish fry",
+    "how to make fish fry",
+    "restaurant style fish fry",
+  ],
+  publishedAt: "2026-09-20",
+  updatedAt: null,
+  featured: false,
+  featuredImage: {
+    base: "/assets/blog/fish-fry-recipe-rs-chefz",
+    alt: "Crispy Indian masala fish fry with a red-spiced coating, garnished with lemon",
+    w: 1200, h: 800,
+  },
+  heroImage: {
+    src: "/assets/blog/fish-fry-recipe-rs-chefz-hero.webp",
+    srcset: "/assets/blog/fish-fry-recipe-rs-chefz-800.webp 800w, /assets/blog/fish-fry-recipe-rs-chefz.webp 1200w, /assets/blog/fish-fry-recipe-rs-chefz-hero.webp 1600w",
+    alt: "Crispy Indian masala fish fry with a spiced red coating, served with lemon and onion",
+    w: 1600, h: 900,
+  },
+  ogImage: "/assets/blog/og-fish-fry-recipe-rs-chefz.webp",
+  relatedProduct: "three-in-one-masala",
+  relatedArticles: [
+    "how-to-make-crispy-chicken-65-at-home",
+    "how-to-get-restaurant-style-crispiness-at-home",
+    "gobi-manchurian-vs-chicken-65-two-indian-starters-to-try",
+  ],
+  content: [
+    { p: "A good fish fry is one of the simplest pleasures in Indian cooking, a coastal staple where fresh fish meets a bright, spiced masala and a few minutes over heat. There's no long simmering and no complicated technique; the whole dish rests on a well-judged marinade and a hot pan." },
+    { p: "This version uses a single masala blend for the coating, so you get an even, restaurant-style flavour without lining up a dozen spices. It works with almost any firm fish and cooks in under ten minutes." },
+
+    { h2: "Choosing Your Fish" },
+    { p: "Firm, meaty fish hold together best in the pan. Pomfret, seer fish (surmai/king fish), mackerel and basa are all reliable choices. Use steaks or fillets for quick weeknight frying, or score whole small fish for a more traditional plate. Whatever you pick, make sure it's <strong>fresh and patted dry</strong>, surface moisture is the enemy of a crisp crust." },
+
+    { h2: "Ingredients You Need" },
+    { p: "Serves three to four." },
+    { ul: [
+      "500 g firm fish (steaks, fillets or whole small fish)",
+      "2 tbsp <a href=\"/products/chicken-65-masala\">RS Chef'z 3 in 1 Masala</a>",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp lemon juice",
+      "2 tbsp rice flour or semolina (rava), for a crisp crust",
+      "Salt, to taste",
+      "Oil, for shallow frying",
+      "Curry leaves and lemon wedges, to serve",
+    ]},
+    { tip: {
+      title: "Rice flour or rava for the crust",
+      body: "A light dusting of rice flour or fine semolina over the marinated fish is the coastal trick for a shatteringly crisp surface that doesn't turn heavy or doughy.",
+    }},
+
+    { h2: "How to Make Masala Fish Fry" },
+    { h3: "Step 1: Marinate" },
+    { p: "Pat the fish dry and make a couple of shallow slashes on each piece so the marinade reaches the flesh. Mix the RS Chef'z 3 in 1 Masala, ginger-garlic paste, lemon juice and salt into a thick paste with a splash of water, and rub it all over the fish. Rest for <strong>20–30 minutes</strong>, long enough to season, not so long that the salt draws out moisture." },
+    { h3: "Step 2: Coat" },
+    { p: "Just before frying, dust each piece lightly with rice flour or rava, pressing gently so it sticks. This is what gives you the crisp, golden crust." },
+    { h3: "Step 3: Pan-Fry" },
+    { p: "Heat a thin layer of oil in a heavy pan over medium-high. Lay the fish in without crowding and fry <strong>3–4 minutes per side</strong>, undisturbed, until a deep golden crust forms and the fish flakes easily. Resist the urge to flip early, a set crust releases from the pan on its own. Toss a few curry leaves into the oil in the last minute for aroma, and serve with lemon." },
+
+    { recipe: {
+      name: "Easy Masala Fish Fry",
+      description: "A crisp, spiced Indian fish fry using RS Chef'z 3 in 1 Masala and a light rice-flour crust, pan-fried until golden.",
+      category: "Starter",
+      cuisine: "Indian",
+      keywords: "Fish Fry recipe, Indian fish fry, masala fish fry",
+      prepMin: 25,
+      cookMin: 10,
+      totalMin: 35,
+      servings: "3–4 servings",
+      yield: "3–4 servings",
+      ingredients: [
+        "500 g firm fish (steaks, fillets or small whole fish)",
+        "2 tbsp RS Chef'z 3 in 1 Masala",
+        "1 tbsp ginger-garlic paste, 1 tsp lemon juice, salt",
+        "2 tbsp rice flour or semolina (rava)",
+        "Oil, for shallow frying",
+        "Curry leaves and lemon wedges, to serve",
+      ],
+      instructions: [
+        "Pat fish dry, slash the surface, and rub with a paste of masala, ginger-garlic, lemon and salt; rest 20–30 minutes.",
+        "Dust each piece lightly with rice flour or rava just before frying.",
+        "Shallow-fry over medium-high heat 3–4 minutes per side until a deep golden crust forms and the fish flakes; finish with curry leaves and lemon.",
+      ],
+    }},
+
+    { h2: "Tips for the Crispiest Fish Fry" },
+    { ul: [
+      "<strong>Dry the fish well</strong> before marinating, wet fish steams instead of searing.",
+      "Fry over steady medium-high heat; too low and the crust goes soft, too high and it burns before the fish cooks.",
+      "Let the crust set before flipping, one confident turn beats several nervous ones.",
+      "Serve straight away, while the coating is at its crispest.",
+    ]},
+    { p: "The same principles carry across every fried starter, see <a href=\"/blog/how-to-get-restaurant-style-crispiness-at-home\">how to get restaurant-style crispiness at home</a>." },
+
+    { h2: "A Simpler Way to Add Flavour" },
+    { p: "The seasoning is the whole game with a fish fry, and a single balanced blend makes it foolproof." },
+    { cta: { product: "three-in-one-masala", position: "inline" } },
+    { p: "RS Chef'z 3 in 1 Masala carries the spice and tang a coastal fish fry needs, with no artificial colours, no preservatives and no artificial flavours. The same pack also handles <a href=\"/blog/how-to-make-crispy-chicken-65-at-home\">Chicken 65</a> and Gobi Manchurian, so one blend covers a whole spread of starters." },
+
+    { h2: "Final Thoughts" },
+    { p: "Fresh fish, a punchy masala marinade, a light crisp crust and a hot pan, that's all an unforgettable fish fry takes. It's fast enough for a weeknight and good enough for guests, and it pairs perfectly with the other fried favourites in the RS Chef'z Kitchen Journal." },
+    { cta: { product: "three-in-one-masala", position: "end" } },
+  ],
+};

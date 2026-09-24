@@ -1,0 +1,16 @@
+/* RS Chef'z - self-hosted brand fonts, reusing the exact woff2 files the
+   main site already ships in /_next/static/media. Basic-Latin subsets only
+   (the ".p." files), which also carry general punctuation, curly quotes and
+   dashes, enough for the blog's English content and keeps requests lean. */
+
+/* Anton - display */
+@font-face{font-family:Anton;font-style:normal;font-weight:400;font-display:swap;src:url(/_next/static/media/9e9f04e3c37952ab-s.p.0pan85mumqyf3.woff2) format("woff2")}
+
+/* Poppins - headings */
+@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url(/_next/static/media/a218039a3287bcfd-s.p.43zbiuwnnoiok.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-style:normal;font-weight:500;font-display:swap;src:url(/_next/static/media/8e6fa89aa22d24ec-s.p.2o7m9ogm38dql.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url(/_next/static/media/e2334d715941921e-s.p.3o_v2fun1jzxk.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(/_next/static/media/47fe1b7cd6e6ed85-s.p.3bh2vc0w-r-ll.woff2) format("woff2")}
+
+/* Manrope - body (variable file covers 400–700) */
+@font-face{font-family:Manrope;font-style:normal;font-weight:400 700;font-display:swap;src:url(/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2) format("woff2")}

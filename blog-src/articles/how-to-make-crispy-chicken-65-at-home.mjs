@@ -1,0 +1,117 @@
+export default {
+  slug: "how-to-make-crispy-chicken-65-at-home",
+  title: "How to Make Crispy Chicken 65 at Home",
+  metaTitle: "How to Make Crispy Chicken 65 at Home | RS Chef'z",
+  metaDescription:
+    "Make crispy, spicy restaurant-style Chicken 65 at home with a simple marinade and RS Chef'z 3 in 1 Masala. Step-by-step recipe with frying tips.",
+  excerpt:
+    "Juicy inside, crackling outside and properly spiced, here's how to make restaurant-style Chicken 65 at home.",
+  category: "recipes",
+  tags: ["Chicken 65", "Masala", "Indian Starters", "Easy Recipes"],
+  primaryKeyword: "Chicken 65 recipe",
+  secondaryKeywords: [
+    "crispy Chicken 65",
+    "restaurant style Chicken 65",
+    "Chicken 65 recipe at home",
+    "how to make Chicken 65",
+    "easy Chicken 65 recipe",
+  ],
+  publishedAt: "2026-09-22",
+  updatedAt: null,
+  featured: false,
+  featuredImage: {
+    base: "/assets/blog/chicken-65-recipe-rs-chefz",
+    alt: "Crispy red Chicken 65 pieces garnished with curry leaves on a plate",
+    w: 1200, h: 800,
+  },
+  heroImage: {
+    src: "/assets/blog/chicken-65-recipe-rs-chefz-hero.webp",
+    srcset: "/assets/blog/chicken-65-recipe-rs-chefz-800.webp 800w, /assets/blog/chicken-65-recipe-rs-chefz.webp 1200w, /assets/blog/chicken-65-recipe-rs-chefz-hero.webp 1600w",
+    alt: "Crispy, spicy restaurant-style Chicken 65 garnished with fried curry leaves and green chilli",
+    w: 1600, h: 900,
+  },
+  ogImage: "/assets/blog/og-chicken-65-recipe-rs-chefz.webp",
+  relatedProduct: "three-in-one-masala",
+  relatedArticles: [
+    "easy-fish-fry-recipe-with-indian-spices",
+    "how-to-get-restaurant-style-crispiness-at-home",
+    "gobi-manchurian-vs-chicken-65-two-indian-starters-to-try",
+  ],
+  content: [
+    { p: "Chicken 65 is the loud, bright-red starter that disappears from the table first, deep-fried nuggets of chicken with a fiery, tangy coating and the unmistakable hit of curry leaves and green chilli. It's a South Indian classic that has become a menu fixture across the country, and it's genuinely quick to make once you know the order of operations." },
+    { p: "The two things that separate a great Chicken 65 from a chewy, pale one are the <strong>marinade</strong> and the <strong>fry</strong>. Here's how to get both right at home." },
+
+    { h2: "What Makes Chicken 65 So Good?" },
+    { p: "It's all about contrast and punch: small pieces of chicken so the surface-to-centre ratio is high, a spiced marinade that seasons the meat right through, and a final tempering of curry leaves, garlic and chilli that perfumes every bite. Done well, it's crisp at the edges, juicy inside and unapologetically spicy." },
+
+    { h2: "Ingredients You Need" },
+    { p: "This serves three to four as a starter. Boneless thigh stays juicier than breast, but either works." },
+    { ul: [
+      "500 g boneless chicken, cut into bite-sized cubes",
+      "2 tbsp <a href=\"/products/chicken-65-masala\">RS Chef'z 3 in 1 Masala</a>",
+      "3 tbsp cornflour and 2 tbsp rice flour (for crunch)",
+      "1 egg (or 3 tbsp curd, for an eggless version)",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp lemon juice, salt to taste",
+      "Oil, for frying",
+      "For the tempering: 1 tbsp oil, 1 sprig curry leaves, 2 green chillies (slit), 1 tsp chopped garlic",
+    ]},
+    { tip: {
+      title: "One masala, the whole flavour",
+      body: "RS Chef'z 3 in 1 Masala is built for exactly these fried starters, it carries the chilli, spice and tang that Chicken 65 needs, so you season the marinade from a single pack instead of measuring out five separate spices.",
+    }},
+
+    { h2: "How to Make Chicken 65 at Home" },
+    { h3: "Step 1: Marinate the Chicken" },
+    { p: "In a bowl, mix the chicken with the RS Chef'z 3 in 1 Masala, ginger-garlic paste, lemon juice, salt, egg (or curd), cornflour and rice flour. Massage until every piece is coated in a thick paste. Rest for at least <strong>30 minutes</strong>, an hour is better, so the flavour soaks in and the flours hydrate into a coating that fries up crisp." },
+    { h3: "Step 2: Fry Until Crisp and Deep Red" },
+    { p: "Heat oil to about <strong>180°C</strong>. Slide in the pieces one by one, in small batches, and fry until golden-red and cooked through, roughly 4–5 minutes. Don't crowd the pan or the temperature drops and the coating turns soft. Drain on a wire rack." },
+    { h3: "Step 3: Temper and Toss" },
+    { p: "In a separate pan, heat 1 tbsp oil, crackle the curry leaves, green chillies and garlic for 30 seconds, then add the fried chicken and toss on high heat for under a minute. This final step is what gives Chicken 65 its signature aroma. Finish with a squeeze of lemon and serve hot." },
+
+    { recipe: {
+      name: "Crispy Chicken 65",
+      description: "Spicy, crisp-fried South Indian chicken starter marinated with RS Chef'z 3 in 1 Masala and finished with a curry-leaf tempering.",
+      category: "Starter",
+      cuisine: "South Indian",
+      keywords: "Chicken 65 recipe, crispy Chicken 65, restaurant style Chicken 65",
+      prepMin: 35,
+      cookMin: 15,
+      totalMin: 50,
+      servings: "3–4 servings",
+      yield: "3–4 servings",
+      ingredients: [
+        "500 g boneless chicken, cut into bite-sized cubes",
+        "2 tbsp RS Chef'z 3 in 1 Masala",
+        "3 tbsp cornflour and 2 tbsp rice flour",
+        "1 egg (or 3 tbsp curd)",
+        "1 tbsp ginger-garlic paste, 1 tsp lemon juice, salt",
+        "Oil, for frying",
+        "1 sprig curry leaves, 2 green chillies, 1 tsp chopped garlic (tempering)",
+      ],
+      instructions: [
+        "Mix chicken with masala, ginger-garlic paste, lemon, salt, egg and the flours into a thick coating; rest 30–60 minutes.",
+        "Fry in small batches at 180°C until golden-red and cooked through; drain on a rack.",
+        "Crackle curry leaves, chilli and garlic in oil, toss the fried chicken through for under a minute, finish with lemon and serve hot.",
+      ],
+    }},
+
+    { h2: "How to Get Extra-Crispy Chicken 65" },
+    { ul: [
+      "Add <strong>rice flour</strong> to the marinade, it fries up crunchier than cornflour alone.",
+      "Rest the marinated chicken so the coating sets before it hits the oil.",
+      "Keep the oil hot and fry in batches; crowding is the number-one cause of soft coating.",
+      "For extra crunch, double-fry: a quick second dip just before the tempering.",
+    ]},
+    { p: "The same frying rules power every crisp starter, the full breakdown is in <a href=\"/blog/how-to-get-restaurant-style-crispiness-at-home\">how to get restaurant-style crispiness at home</a>." },
+
+    { h2: "A Simpler Way to Add Flavour" },
+    { p: "Chicken 65 lives or dies on its seasoning, and balancing chilli, tang and spice by hand is fiddly. A single blend makes it repeatable." },
+    { cta: { product: "three-in-one-masala", position: "inline" } },
+    { p: "RS Chef'z 3 in 1 Masala is made with no artificial colours, no preservatives and no artificial flavours, and as the name suggests, the same pack that handles Chicken 65 also takes care of Fish Fry and Gobi Manchurian, so it earns its place in the cupboard." },
+
+    { h2: "Final Thoughts" },
+    { p: "Small pieces, a well-rested marinade, hot oil and a punchy curry-leaf tempering, that's restaurant-style Chicken 65 in four moves. Try it once, and pair it next with an <a href=\"/blog/easy-fish-fry-recipe-with-indian-spices\">easy fish fry</a> from the same masala for a proper fried-starter spread." },
+    { cta: { product: "three-in-one-masala", position: "end" } },
+  ],
+};

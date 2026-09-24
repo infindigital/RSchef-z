@@ -53,6 +53,14 @@
   # pointing at it across.
   RewriteRule ^products/three-in-one-masala/?$ /products/chicken-65-masala [L,R=301]
 
+  # The Kitchen Journal index lives at /blog/ (a real directory served by
+  # DirectoryIndex). With DirectorySlash Off a bare /blog would not resolve, so
+  # send it to the canonical slashed form. Article and category pages are
+  # extensionless files (blog/<slug>.html, blog/category/<cat>.html) and are
+  # served by the clean-URL and trailing-slash rules below, exactly like the
+  # product pages.
+  RewriteRule ^blog$ /blog/ [L,R=301]
+
   # Strip a trailing slash, so /products/gobi-manchurian-masala/ and
   # /products/gobi-manchurian-masala are not two URLs for one page. A product
   # slug also names a prefetch directory, so a bare !-d guard would skip

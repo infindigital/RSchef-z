@@ -1,0 +1,173 @@
+export default {
+  slug: "how-to-make-restaurant-style-gobi-manchurian-at-home",
+  title: "How to Make Restaurant-Style Gobi Manchurian at Home",
+  metaTitle: "How to Make Restaurant-Style Gobi Manchurian at Home | RS Chef'z",
+  metaDescription:
+    "Learn how to make crispy, restaurant-style Gobi Manchurian at home with simple ingredients and RS Chef'z Gobi Manchurian Masala.",
+  excerpt:
+    "Learn how to make crispy, flavourful Gobi Manchurian at home with simple ingredients and the right masala blend.",
+  category: "recipes",
+  tags: ["Gobi Manchurian", "Masala", "Indian Starters", "Easy Recipes"],
+  primaryKeyword: "Gobi Manchurian recipe",
+  secondaryKeywords: [
+    "restaurant style Gobi Manchurian",
+    "Gobi Manchurian recipe at home",
+    "crispy Gobi Manchurian",
+    "Gobi Manchurian masala",
+    "how to make Gobi Manchurian",
+    "easy Gobi Manchurian recipe",
+    "homemade Gobi Manchurian",
+  ],
+  publishedAt: "2026-09-24",
+  updatedAt: null,
+  featured: true,
+  featuredImage: {
+    base: "/assets/blog/gobi-manchurian-recipe-rs-chefz",
+    alt: "Crispy restaurant-style Gobi Manchurian garnished with spring onions in a dark bowl",
+    w: 1600, h: 900,
+  },
+  heroImage: {
+    src: "/assets/blog/gobi-manchurian-recipe-rs-chefz.webp",
+    srcset:
+      "/assets/blog/gobi-manchurian-recipe-rs-chefz-800.webp 800w, /assets/blog/gobi-manchurian-recipe-rs-chefz-1200.webp 1200w, /assets/blog/gobi-manchurian-recipe-rs-chefz.webp 1600w",
+    alt: "Crispy restaurant-style Gobi Manchurian garnished with spring onions, served hot in a dark bowl",
+    w: 1600, h: 900,
+  },
+  ogImage: "/assets/blog/og-gobi-manchurian-recipe.webp",
+  relatedProduct: "gobi-manchurian-masala",
+  relatedArticles: [
+    "how-to-get-restaurant-style-crispiness-at-home",
+    "5-easy-dishes-you-can-make-with-gobi-manchurian-masala",
+    "gobi-manchurian-vs-chicken-65-two-indian-starters-to-try",
+  ],
+  content: [
+    { p: "Gobi Manchurian is the dish everyone reaches for first at an Indo-Chinese restaurant, golden, crackly cauliflower tossed in a glossy, spicy-sweet sauce that hits sour, savoury and hot notes all at once. It looks simple, and yet the version most people make at home turns out soft, oily or bland by the time it reaches the table." },
+    { p: "The good news: restaurant-style Gobi Manchurian is far more about <strong>technique and timing</strong> than about any secret ingredient. Get the batter, the frying temperature and the final toss right, and you can put out a plate every bit as crisp as your favourite spot. This guide walks through the whole process, with the specific steps that keep the cauliflower crunchy once the sauce goes on." },
+
+    { h2: "What Makes Gobi Manchurian So Special?" },
+    { p: "Manchurian is the Indo-Chinese family of dishes built on a sauce of ginger, garlic, green chilli, soy and a little vinegar, thickened with cornflour. \"Gobi\" simply means cauliflower, the neutral, sturdy vegetable that soaks up all that flavour while staying crisp." },
+    { p: "The magic is contrast. A great plate gives you three things in the same bite: a shattering crust, a tender centre and a sauce that clings without turning everything soggy. When any one of those slips, the dish falls flat, which is exactly why the home version so often disappoints. Nail all three and it tastes like a treat, whether you serve it dry as a starter or semi-gravy over fried rice." },
+
+    { h2: "Ingredients You Need" },
+    { p: "Everything here is a regular kitchen staple. The quantities below serve three to four people as a starter." },
+    { h3: "For the cauliflower and coating" },
+    { ul: [
+      "1 medium cauliflower (about 500 g), cut into bite-sized florets",
+      "6 tbsp all-purpose flour (maida)",
+      "3 tbsp cornflour (cornstarch)",
+      "1.5 tbsp <a href=\"/products/gobi-manchurian-masala\">RS Chef'z Gobi Manchurian Masala</a>",
+      "Salt, to taste",
+      "Water, to make a thick coating batter",
+      "Oil, for frying",
+    ]},
+    { h3: "For the Manchurian toss" },
+    { ul: [
+      "2 tbsp oil",
+      "1 tbsp finely chopped garlic",
+      "1 tbsp finely chopped ginger",
+      "2 green chillies, slit",
+      "1 small onion, cut into squares",
+      "1/2 capsicum, cut into squares",
+      "2 tbsp spring onion whites (save the greens for garnish)",
+      "1 tsp RS Chef'z Gobi Manchurian Masala",
+      "1 tbsp soy sauce, 1 tsp vinegar, 1 tsp tomato ketchup (optional, for a touch of sweetness)",
+      "1 tsp cornflour mixed into 3 tbsp water (slurry)",
+    ]},
+    { tip: {
+      title: "Why the masala does the heavy lifting",
+      body: "A single blend like RS Chef'z Gobi Manchurian Masala carries the ginger-garlic-chilli backbone and the spice balance that usually takes a shelf of bottles to build. It goes into both the coating and the sauce, so the flavour runs all the way through the dish instead of sitting only on the surface.",
+    }},
+
+    { h2: "How to Make Gobi Manchurian at Home" },
+    { p: "The recipe breaks into five clear stages. Read them through once before you start, Manchurian moves fast at the end, and it helps to have everything chopped and within reach (what cooks call <em>mise en place</em>) before the pan gets hot." },
+
+    { img: {
+      src: "/assets/blog/gobi-manchurian-steps-rs-chefz.webp",
+      srcset: "/assets/blog/gobi-manchurian-steps-rs-chefz-800.webp 800w, /assets/blog/gobi-manchurian-steps-rs-chefz.webp 1400w",
+      alt: "Step-by-step of Gobi Manchurian: raw florets, battered florets, frying in oil, tossing aromatics, and the finished dish",
+      caption: "From florets to finish: parboil, coat, fry crisp, then toss in the sauce.",
+      w: 1400, h: 933,
+    }},
+
+    { h3: "Step 1: Prepare the Cauliflower" },
+    { p: "Cut the cauliflower into even, bite-sized florets so they cook at the same rate. Bring a pot of water to the boil, add a little salt, drop the florets in for <strong>2–3 minutes</strong>, then drain well and pat completely dry. This quick parboil does two jobs: it cleans the florets and it just-softens the centre so the inside is tender by the time the outside is golden. Dry them thoroughly, wet florets make the batter slide off and cause the oil to spit." },
+
+    { h3: "Step 2: Prepare the Masala Coating" },
+    { p: "In a bowl, whisk together the flour, cornflour, RS Chef'z Gobi Manchurian Masala and salt. Add water a little at a time until you have a <strong>thick, smooth batter</strong> that coats the back of a spoon, think pouring cream, not milk. Too thin and it won't cling; too thick and it turns doughy. The cornflour is what gives you that light, glassy crunch, so don't skip it." },
+
+    { h3: "Step 3: Coat the Gobi" },
+    { p: "Drop the dried florets into the batter and turn them gently until every piece is evenly covered. Lift each floret out and let the excess drip back into the bowl, you want a thin, even shell, not a heavy clump. Coat in small batches just before frying so the batter stays crisp rather than soaking in." },
+
+    { h3: "Step 4: Fry Until Crispy" },
+    { p: "Heat oil to about <strong>180°C</strong> (medium-high). Test it with a drop of batter, it should sizzle and rise steadily, not sink or burn. Fry the florets in small batches so the temperature doesn't crash, turning them until deep golden and crisp, about 3–4 minutes. Lift onto a wire rack or paper towel. For extra crunch, let them rest a minute and fry a second time for 30–40 seconds just before saucing." },
+    { tip: {
+      title: "The crowding mistake",
+      body: "Adding too many florets at once drops the oil temperature, and cool oil means greasy, soft Gobi. Fry in batches, give each piece room, and let the oil recover between rounds.",
+    }},
+
+    { h3: "Step 5: Add the Manchurian Flavours" },
+    { p: "Heat 2 tbsp oil in a wide pan or wok on high. Add the garlic, ginger and green chillies and stir for 30 seconds until fragrant. Add the onion, capsicum and spring onion whites and toss for a minute, you want them glossy and just-cooked, still with a bite. Stir in the soy sauce, vinegar, ketchup (if using) and 1 tsp of the masala, then pour in the cornflour slurry and let the sauce thicken for 30 seconds until it turns glossy." },
+    { p: "Now work quickly: tip in the fried Gobi, toss for <strong>under a minute</strong> so every piece is glazed but still crisp, kill the heat, and scatter over the spring onion greens. Serve immediately, Gobi Manchurian waits for no one." },
+
+    { recipe: {
+      name: "Restaurant-Style Gobi Manchurian",
+      description: "Crispy fried cauliflower tossed in a spicy-sweet Indo-Chinese Manchurian sauce, made at home with RS Chef'z Gobi Manchurian Masala.",
+      category: "Starter",
+      cuisine: "Indo-Chinese",
+      keywords: "Gobi Manchurian recipe, crispy Gobi Manchurian, restaurant style Gobi Manchurian",
+      prepMin: 20,
+      cookMin: 20,
+      totalMin: 40,
+      servings: "3–4 servings",
+      yield: "3–4 servings",
+      ingredients: [
+        "1 medium cauliflower (about 500 g), cut into florets",
+        "6 tbsp all-purpose flour (maida)",
+        "3 tbsp cornflour (cornstarch)",
+        "1.5 tbsp RS Chef'z Gobi Manchurian Masala (plus 1 tsp for the sauce)",
+        "Salt, to taste",
+        "Oil, for frying",
+        "1 tbsp each finely chopped garlic and ginger",
+        "2 green chillies, slit",
+        "1 small onion and 1/2 capsicum, cut into squares",
+        "2 tbsp spring onion whites (greens for garnish)",
+        "1 tbsp soy sauce, 1 tsp vinegar, 1 tsp tomato ketchup (optional)",
+        "1 tsp cornflour in 3 tbsp water (slurry)",
+      ],
+      instructions: [
+        "Parboil the florets in salted water for 2–3 minutes, drain and pat completely dry.",
+        "Whisk flour, cornflour, 1.5 tbsp masala and salt with water into a thick, smooth batter.",
+        "Coat the dried florets evenly, letting excess batter drip off.",
+        "Fry in small batches at 180°C until deep golden and crisp; drain on a rack.",
+        "Stir-fry garlic, ginger, chilli, onion, capsicum and spring onion whites on high heat.",
+        "Add soy sauce, vinegar, ketchup and 1 tsp masala, then the slurry; cook until glossy.",
+        "Toss in the fried Gobi for under a minute, garnish with spring onion greens and serve hot.",
+      ],
+    }},
+
+    { h2: "How to Get Extra-Crispy Gobi Manchurian" },
+    { p: "If your Gobi keeps going soft, one of these is almost always the reason:" },
+    { ul: [
+      "<strong>Dry the florets fully</strong> after parboiling. Surface water thins the batter and steams the crust.",
+      "<strong>Keep the batter thick</strong> and cornflour-forward, that is what sets into a glassy shell.",
+      "<strong>Hold the oil at 180°C</strong> and fry in small batches so it never cools down.",
+      "<strong>Double-fry</strong> for a quick second dip just before saucing to drive off any residual moisture.",
+      "<strong>Sauce at the very end</strong>, over high heat, for under a minute, long simmering is what turns crisp Gobi soggy.",
+    ]},
+    { p: "For a deeper look at the frying science that applies to every crispy starter, read <a href=\"/blog/how-to-get-restaurant-style-crispiness-at-home\">how to get restaurant-style crispiness at home</a>." },
+
+    { h2: "A Simpler Way to Add Flavour" },
+    { p: "The part that trips most home cooks isn't the frying. It's the seasoning. Getting the ginger, garlic, chilli and spice balance right across both the coating and the sauce usually means juggling several jars and still second-guessing the ratios." },
+    { cta: { product: "gobi-manchurian-masala", position: "inline" } },
+    { p: "Using a ready blend like RS Chef'z Gobi Manchurian Masala takes that guesswork out. It's made with no artificial colours, no preservatives and no artificial flavours, so you get a consistent, restaurant-style base every time, and because the same blend goes into the batter and the toss, the flavour is even from the first bite to the last." },
+
+    { h2: "More Than Just Gobi" },
+    { p: "One of the quiet advantages of a good Manchurian blend is how far it travels. The same masala that crisps up cauliflower works beautifully on mushrooms for a quick <strong>Mushroom Fry</strong>, and it makes an easy marinade for <strong>Paneer Tikka</strong> when you want something off the tawa or grill." },
+    { p: "If you like getting more out of a single pack, see <a href=\"/blog/5-easy-dishes-you-can-make-with-gobi-manchurian-masala\">5 easy dishes you can make with Gobi Manchurian Masala</a>, the same crunch and flavour, three different ways." },
+
+    { h2: "Final Thoughts" },
+    { p: "Restaurant-style Gobi Manchurian at home comes down to a handful of habits: dry florets, a thick cornflour batter, hot oil fried in batches, and a fast final toss. Get those right and the rest is easy, and with the seasoning handled by a single blend, it's a weeknight dish, not a weekend project." },
+    { p: "Make it once paying attention to the crunch and the timing, and it'll quickly become the plate your family asks for by name." },
+    { cta: { product: "gobi-manchurian-masala", position: "end" } },
+  ],
+};
